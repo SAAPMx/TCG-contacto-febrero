@@ -1,0 +1,322 @@
+:root {
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233, 187, 2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --rojo-mariana: #E4121E;
+    --rojo-mariana-2: #c32341;
+    --azul-mariana: #004AAD;
+    --azul-mariana-claro: #4F7DCF;
+
+    --gris: #757575;
+    --gris-claro: #EEEEEE;
+
+    --fuentePrincipal: 'Staatliches', sans-serif;
+    --fuenteClaridad: 'Roboto', sans-serif;
+    --fuenteLato: 'Lato', sans-serif;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    background-color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    text-align: center;
+    color: var(--azul-mariana);
+    font-family: var(--fuentePrincipal);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+
+
+/** Header **/
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+}
+@media (min-width: 430px) {
+    .header__logo{
+        padding: 0 4rem;
+    }
+     
+} 
+@media (min-width: 760px) {
+  .header__logo{
+      max-width: 50rem;
+      margin: 0 auto;
+  }
+} 
+
+
+
+
+
+/** Navegacion **/
+.navegacion {
+    background-color: var(--azul-mariana);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    min-height: 4rem;
+    gap: 2rem; 
+}
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--rojo-mariana);
+}
+
+/** Grid **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/** Formulario **/
+.formulario {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 300px) {
+    .centrar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    } 
+    .formulario__submit {
+        margin-top: 2rem;
+
+    }
+
+} 
+@media (min-width: 760px) {
+    .centrar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+} 
+
+
+.formulario__campo {
+   border: 1rem solid var(--gris);
+   background-color: transparent;
+   color: var(--negro);
+   font-size: 2rem;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 1rem;
+   appearance: none;
+}
+.formulario__submit {
+    background-color: var(--gris-claro);
+    border: #000;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+}
+
+
+
+
+ /* ------------------ STYLE DE LOGIN ------------- */
+    
+/*GLOBALES -------------- 
+    - Botones*/
+.boton{
+    background-color: var(--rojo-mariana);
+    color: var(--blanco);
+    font-family: 'Roboto';
+    padding: 2rem, 2rem;
+    margin: 5rem auto 5rem auto; /* arriba, derecha, abajo, izquierda*/
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    width: 60%;
+    text-align: center;
+    border: none;
+  }
+  .boton:hover{
+    cursor: pointer;
+    background-color: var(--azul-mariana);
+    transition: 1s;
+    color: var(--blanco);
+  }
+  .margin-top{
+    margin-top: 1.5rem;
+  }
+  .margin-bottom{
+    margin-bottom: 1rem;
+  }
+
+
+  
+
+
+  /*FORMULARIO ---------------------- */
+  .formulario{
+    min-height: 6rem;
+    /*max-width: 40%;*/
+    border-radius:4px;
+    /*CENTRAR EL CONTENEDOR */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Alineación horizontal*/
+    justify-content: center; /*alineación vertical: Lo centra verticalmente*/
+    margin: 2rem auto 3rem auto; /* arriba, derecha, abajo, izquierda*/
+    min-width: auto;
+    background-color: var(--gris-claro);
+  
+  }
+
+  @media (min-width: 430px) {
+    .formulario{
+      background-color: var(--gris-claro);
+      /*CENTRAR EL CONTENEDOR */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /*alineación vertical: Lo centra verticalmente*/
+      min-width: auto;
+      max-width: 90%;
+    }
+  } 
+  @media (min-width: 768px) { /* Para celular, el fondo pasa a ser general*/
+    .formulario {
+      background-color: var(--gris-claro);
+      max-width: 50%;
+    }
+  } 
+  
+  .contenedor-form{ /*contenedor vertical*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Alineación horizontal*/
+    justify-content: center; /*alineación vertical: Lo centra verticalmente*/
+  }
+  .contenedor-opciones{ /*contenedor horizontal*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:2rem 3rem;
+  }
+  .contenedor-opciones a {
+    font-family: var(--fuentePrincipal);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size:larger;
+  }
+
+  .iniciar{
+    padding: 2rem 8rem; /* arriba, derecha, abajo, izquierda*/
+    background-color: var(--rojo-mariana);
+    color: var(--blanco);
+    font-family: 'Roboto';
+    text-transform: uppercase;
+  }
+  .registrar{
+    padding: 2rem 8rem; /* arriba, derecha, abajo, izquierda*/
+    background-color: var(--rojo-mariana);
+    color: var(--blanco);
+    font-family: 'Roboto';
+    text-transform: uppercase;
+  }
+  .iniciar:hover{
+    background-color: var(--rojo-mariana-2);
+    transition: 1s;
+  }
+  .registrar:hover{
+    background-color: var(--rojo-mariana-2);
+    transition: 1s;
+  }
+  @media (min-width: 768px) { /* Para celular, el fondo pasa a ser general*/
+    .iniciar {
+      padding: 2rem 8rem;
+    }
+  } 
+  @media (min-width: 345px) {
+    .iniciar {
+        padding: 2rem 2rem;
+      }
+    .registrar{
+        padding: 2rem 2rem;
+    }
+  } 
+  
+  
+
+
+
+  /*INICIAR SESIÓN*/
+  .login-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*alineación vertical: Lo centra verticalmente*/
+    background-color: var(--blanco-opaco);
+    padding: 2rem 5rem; /* arriba, derecha, abajo, izquierda*/
+    margin-bottom: 5rem ;
+  }
+  .input{
+    font-family: var(--fuenteLato);
+    font-size: larger;
+    padding: .5rem 15rem .5rem 1rem;/* arriba, derecha, abajo, izquierda*/
+    margin: 2rem auto 2rem auto; /* arriba, derecha, abajo, izquierda*/
+    width: 100%;
+  }
+  

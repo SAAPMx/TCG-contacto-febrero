@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto -  TCG</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    
+
+    <!--Enlace para la API de Google Fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> -->
+   <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Libre+Baskerville&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/Logo de consultora.png"> <!--ÍCONO DE LA PÁGINA-->
+
+
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <!--Vinculación del HTML a la hoja de estilos-->
+    <link rel="preload" href="css/style.css" as="style" >
+    <link rel="stylesheet" href="css/style.css">
+
+    
+</head>
+<body>
+    <header class="header">
+        
+    </header>
+    <a href="" class=" navegacion__enlace logged-in" id="logout"></a>
+   
+
+    <div action="" class="formulario logged-out"> <!--VENTANA LOGIN-->
+        <div class="contenedor-form"> <!--Contenedor vertical general-->
+            <div class="contenedor-opciones">
+                <a class="iniciar logged-out" id="btn-iniciar"></a>
+                <a class="registrar logged-out" id="btn-registrar"></a>
+            </div>
+
+            <div class="entradas" >
+                <form class="login-formulario" id="signup-form" >
+                    <input 
+                        type="text"
+                        id="signup-email"
+                        class="input"
+                        placeholder="Correo Electrónico *"
+                        autofocus
+                        required
+                    />
+                    <input 
+                        type="tel"
+                        id="signup-cel"
+                        class="input"
+                        placeholder="Celular" 
+                        required
+                    />
+                    <input 
+                        type="text"
+                        id="signup-name"
+                        class="input"
+                        placeholder="Nombre(s) *"
+                        required
+                    />
+                    <input 
+                        type="text"
+                        id="signup-lname"
+                        class="input"
+                        placeholder="Apellidos *"
+                        required
+                    />
+                    
+                    <select name="" id="signup-motive" class="input" required>
+                        <option value="" hidden>- Motivo -</option>
+                        <option value="NewsLetter">Suscribirme News Letter</option>
+                        <option value="Contratar">¡Quiero contratar los servicios!</option>
+                        <option value="Vacantes">Recibir información sobre vacantes</option>
+                    </select>
+
+                    <input 
+                        type="text"
+                        id="signup-company"
+                        class="input"
+                        placeholder="Nombre de Empresa"
+                    />
+                    
+                    <input class="boton formulario__submit" id="btn-agt-form" type="submit" ></input>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- SCRIPTS -->
+    <script src='js/index.js' type="module"></script>
+    <!-- Toastify js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    
+</body>
+
+<footer>
+    
+</footer>
+</html>
